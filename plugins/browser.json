@@ -1,0 +1,22 @@
+{
+  "prepare_queue": {
+    "installed": [],
+    "uninstalled": []
+  },
+  "config_munge": {
+    "files": {}
+  },
+  "installed_plugins": {
+    "cordova-plugin-inappbrowser": {
+      "PACKAGE_NAME": "com.liveiplcricketgautam03.Cricketgautam3"
+    },
+    "cordova-plugin-browsertab": {
+      "PACKAGE_NAME": "com.liveiplcricketgautam03.Cricketgautam3"
+    }
+  },
+  "dependent_plugins": {
+    "cordova-plugin-compat": {
+      "PACKAGE_NAME": "com.liveiplcricketgautam03.Cricketgautam3"
+    }
+  }
+}

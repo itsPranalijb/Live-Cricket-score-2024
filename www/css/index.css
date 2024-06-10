@@ -1,0 +1,429 @@
+html, body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+button, input {
+  font-family: 'Poppins', sans-serif;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  background-color: #EAF4F2;
+}
+@keyframes blink {
+  0% { opacity: 1; }
+  50% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+h1 {
+  animation: blink 1s infinite; /* Adjust the animation duration as needed */
+}
+.device {
+  display: flex;
+  flex-direction: column;
+  width: 375px;
+  height: 736px;
+  box-shadow: 0 0 20px 1px rgba(0, 0, 0, .2);
+  background-image: linear-gradient(to bottom, #171616, #006400);
+
+
+
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  padding: 40px 20px 20px;
+}
+
+.left-side {
+  display: flex;
+  flex-direction: column;
+}
+
+.left-side h1 {
+  font-size: 20px;
+  color: #e80c0c;
+  margin: 0 0 10px;
+  padding: 0;
+}
+
+.left-side span {
+  font-size: 14px;
+  color: #959595;
+}
+
+.avatar {
+  margin-left: auto;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: url(../img/hd.png) no-repeat center;
+  background-size: cover;
+  transition: background-color 0.3s ease, filter 0.3s ease, opacity 0.3s ease; /* Add opacity transition */
+  animation: blink 1s infinite; /* Add initial blinking animation */
+}
+
+.avatar:hover {
+  background-color: rgba(170, 170, 170, 0.5); /* Semi-transparent gray background on hover */
+  filter: brightness(80%); /* Adjust brightness on hover */
+  animation: none; /* Disable the initial blinking animation on hover */
+  opacity: 1; /* Ensure full opacity on hover */
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0.2; /* Set opacity to a low value at the halfway point of the animation */
+  }
+}
+
+
+
+
+
+.searchbox {
+  margin: 0 20px;
+  padding: 10px 20px 10px 50px;
+  border-radius: 14px;
+  background: #F3F3F3 url(../img/image4.svg) no-repeat 20px center; 
+  background-size: 20px;
+}
+
+.searchbox input {
+  border: 0;
+  background-color: transparent;
+  font-size: 14px;
+  color: #000;
+  outline: none;
+  opacity: 0.4;
+}
+
+.videobox {
+  position: relative;
+  width: calc(100% - 40px);
+  height: 150px;
+  background-size: cover;
+  margin: 20px 20px 10px;
+  border-radius: 20px;
+  overflow: hidden;
+  filter: grayscale(70%) contrast(120%) brightness(90%); /* Video-like effects */
+}
+
+.videobox:hover {
+  filter: grayscale(0%) contrast(100%) brightness(100%); /* Reset effects on hover */
+}
+
+.videobox .wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.videobox .wrapper button.play {
+  position: relative;
+  border: 0;
+  background-color: rgba(0, 0, 0, .4);
+  width: 60px;
+  height: 60px;
+  padding: 0;
+  margin: 0;
+  border-radius: 50%;
+  transition: all .3s ease-out;
+}
+
+.videobox .wrapper button.play:before {
+  content: '';
+  position: absolute;
+  top: 22px;
+  left: 26px;
+  width: 0;
+  height: 0;
+  border-top: 8px solid transparent;
+  border-bottom: 8px solid transparent;
+  border-left: 14px solid #FFFFFF;
+}
+
+.videobox .wrapper button.play:hover {
+  cursor: pointer;
+  background-color: rgba(0, 0, 0, .6);
+}
+
+.filters {
+  display: flex;
+  list-style-type: none;
+  padding: 0 20px;
+  margin: 20px 0 0;
+  white-space: nowrap;
+  overflow: auto;
+}
+
+.filters li {
+  margin-right: 15px;
+  background-color: #F3F3F3;
+  padding: 10px 20px;
+  font-size: 14px;
+  border-radius: 14px;
+  color: #959595;
+  cursor: pointer;
+  transition: all .3s ease-out;
+}
+
+.filters li:last-child {
+  margin-right: 0;
+}
+
+.filters li:hover {
+  background-color: #EAEFE7;
+  color: #58907D;
+}
+
+.filters li.active {
+  background-color: #c5ecc0;
+  color: #58907D;
+  font-weight: 600;
+  cursor: default; 
+}
+
+.recipes {
+  padding: 20px 20px 0;
+  height: 250px;
+  overflow-y: auto;
+}
+
+.recipe {
+  border-radius: 20px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 200px;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+
+.recipe:hover .wrapper {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.recipe .wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(0, 0, 0, 0.5);
+  transition: all .3s ease-out;
+}
+
+.recipe.first {
+  background-image: url(../img/match-1.png);
+}
+
+.recipe.first1{
+  background-image: url(../img/match-1.png);
+}
+.recipe.first2{
+  background-image: url(../img/match-1.png);
+}
+.recipe.second {
+  background-image: url(../img/csk-flag.png);
+}
+.recipe.second1 {
+  background-image: url(../img/dc-flag.png);
+}
+.recipe.second2 {
+  background-image: url(../img/gt-flag.png);
+}
+.recipe.second3 {
+  background-image: url(../img/knr-flag.png);
+}
+.recipe.second4 {
+  background-image: url(../img/lsg-flag.png);
+}
+.recipe.second5 {
+  background-image: url(../img/mi-flag.png);
+}
+.recipe.second6 {
+  background-image: url(../img/pk-flag.png);
+}
+.recipe.second7 {
+  background-image: url(../img/rr-flag.png);
+}
+.recipe.second8 {
+  background-image: url(../img/rcb-flag.png);
+}
+.recipe.second9 {
+  background-image: url(../img/srh-flag.png);
+}
+.recipe-header {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+}
+
+.recipe-header span {
+  font-size: 20px;
+  color: #FFFFFF;
+}
+
+.rating {
+  margin-left: auto;
+  color: #FFFFFF;
+  font-size: 14px;
+  padding-left: 24px;
+  background: url(../img/imagetime.svg) no-repeat left 2px;
+  background-size: 14px;
+}
+
+.recipe-info {
+  display: flex;
+  flex-direction: column;
+  margin-top: auto;
+  padding: 20px;
+}
+
+.recipe-info span {
+  color: #FFFFFF;
+  font-weight: 600;
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+
+.time {
+  color: #FFFFFF;
+  font-size: 14px;
+  padding-left: 24px;
+  background: url(../img/imageRating.svg) no-repeat left 2px;
+  background-size: 14px;
+}
+
+.tabbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.tabbar button {
+  border: 0;
+  background-color: transparent;
+  background-position: center top;
+  background-size: 20px;
+  background-repeat: no-repeat;
+  flex: 1;
+  color: #C6C6C6;
+  cursor: pointer;
+  padding-top: 25px;
+  transition: all .3s ease-out;
+}
+
+.tabbar button:hover {
+  opacity: 0.8;
+  color: #58907D;
+} 
+
+.tabbar button.active {
+  color: #58907D;
+}
+
+.tabbar button.home {
+  background-image: url(../img/image.svg);
+}
+
+.tabbar button.lists {
+  background-image: url(../img/image1.svg);
+}
+
+.tabbar button.meal {
+  background-image: url(../img/image2.svg);
+}
+
+.tabbar button.settings {
+  background-image: url(../img/image3.svg);
+}
+/* CSS for the cricket card */
+.cricket-card {
+  width: 320px;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  padding: 20px;
+  margin: 20px;
+  background-color: #f5f5f5;
+}
+
+.cricket-card img {
+  width: 100%;
+  max-height: 200px;
+  border-radius: 10px;
+}
+
+.cricket-card h2 {
+  margin: 10px 0;
+  color: #000;
+  font-size: 20px;
+}
+
+.cricket-card p {
+  font-size: 16px;
+  color: #555;
+}
+
+.cricket-card ul{
+color: #000;
+}
+
+.cricket-button {
+  display: inline-block;
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  text-decoration: none;
+}
+
+.cricket-button:hover {
+  background-color: #0056b3;
+}
+
+.Live {
+  overflow-y: auto; /* Add a scrollbar for the Live section */
+}
+
+.loader {
+  border: 4px solid #f3f3f3;
+  border-top: 4px solid #3498db;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  animation: spin 2s linear infinite;
+  display: none; /* Initially hidden */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
